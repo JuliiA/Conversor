@@ -35,16 +35,19 @@ public class ConversorGenerico extends javax.swing.JFrame {
         conversores.add(new CentimetrosPulgadas());
         conversores.add(new MetrosKM());
         conversores.add(new KiloLibra());
+        conversores.add(new CelsiusFahrenheit());
         
         for (Conversor conversor : conversores){
-            jComboBoxConversion.addItem(conversor.toString());
-            
+            jComboBoxConversion.addItem(conversor.toString());            
         }
         conversorSeleccionado = conversores.get(0);
-        setLabels();
-                
+        setLabels();                
     }
 
+    /**
+     * Setea los valores de los labels con el string proporcionado por la clase hija
+     *  que se selecciona desde el combo box
+     */
     private void setLabels() {
         jLabelValor1.setText(conversorSeleccionado.getLabelValor1());
         jLabelValor2.setText(conversorSeleccionado.getLabelValor2());
