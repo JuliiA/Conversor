@@ -12,11 +12,21 @@ package conversor;
 public class KiloLibra extends Conversor{
     private static final double UNA_LIBRA = 2.20462;
 
+    /**
+     * Convierte Kilo a Libra
+     * @param kilo
+     * @return valor calculado
+     */
     @Override
     public Double convertirValor1Valor2(Double kilo) {
         return kilo * UNA_LIBRA;
     }
 
+    /**
+     * Convierte Libra a Kilo
+     * @param libra
+     * @return valor calculado
+     */
     @Override
     public Double convertirValor2Valor1(Double libra) {
         return libra / UNA_LIBRA;

@@ -23,6 +23,11 @@ public class CentimetrosPulgadas extends Conversor{
         return centimetros / UNA_PULGADA;
     }
 
+    /**
+     * Convierte valor Pulgadas a Centimetros
+     * @param pulgadas
+     * @return valor calculado
+     */
     @Override
     public Double convertirValor2Valor1(Double pulgadas) {
         return pulgadas * UNA_PULGADA;

@@ -12,11 +12,21 @@ package conversor;
 public class MetrosKM extends Conversor{
     private static final double UN_KM = 1000;
     
+    /**
+     * Convierte valor metro a km
+     * @param metro
+     * @return valor calculado
+     */
     @Override
     public Double convertirValor1Valor2(Double metro) {
         return metro / UN_KM;
     }
 
+    /**
+     * Convierte valor Km a metro
+     * @param KM
+     * @return valor calculado
+     */
     @Override
     public Double convertirValor2Valor1(Double KM) {
         return KM * UN_KM;

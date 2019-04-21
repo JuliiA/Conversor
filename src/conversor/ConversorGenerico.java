@@ -8,7 +8,7 @@ package conversor;
 
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
-import static java.time.Clock.system;
+//import static java.time.Clock.system;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
