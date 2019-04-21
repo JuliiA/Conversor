@@ -198,7 +198,8 @@ public class ConversorGenerico extends javax.swing.JFrame {
         try {
             if(convertirAValor2){
                 conversionString=jTextFieldValor1.getText();
-                if(conversionString.contains("D")||conversionString.contains("F")){
+                if(conversionString.contains("D")||conversionString.contains("F")
+                        || conversionString.contains("d") || conversionString.contains("f")){
                     throw new NumberFormatException("");
                 }
             }
@@ -209,7 +210,7 @@ public class ConversorGenerico extends javax.swing.JFrame {
             valor2Double = conversorSeleccionado.convertirValor1Valor2(conversionDouble);
             
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "No se ha podido convertir: " + conversionDouble, "ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "No se ha podido convertir: " + conversionString, "ERROR", JOptionPane.ERROR_MESSAGE);
             jTextFieldValor1.setText("");
             jTextFieldValor1.requestFocus();
             return;
@@ -285,7 +286,7 @@ public class ConversorGenerico extends javax.swing.JFrame {
 
     private void jTextFieldValor2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldValor2KeyPressed
         if(evt.getKeyChar()==KeyEvent.VK_ENTER){
-            convertirValor1();
+            convertirValor2();
         }
     }//GEN-LAST:event_jTextFieldValor2KeyPressed
 
